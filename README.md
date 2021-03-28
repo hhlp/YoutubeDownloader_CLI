@@ -8,8 +8,8 @@ FFmpeg Install:
   - bin
   - doc
   - presets
-   - LICENCE
-   - README
+    - LICENCE
+    - README
 3. Copy or clip folder to C-Drive or desired folder
 4. Open PowerShell as admin
 5. Type this command (Depends on your save path for the folder "FFmpeg"):
