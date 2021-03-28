@@ -5,9 +5,9 @@ FFmpeg Install:
 1. FFmpeg download link Windows 10: https://www.gyan.dev/ffmpeg/builds/ffmpeg-git-full.7z
 2. Extract files to a folder named FFmpeg
     - FFmpeg:
-        -- bin
-        -- doc
-        -- presets
+        bin
+        doc
+        presets
         - LICENCE
         - README
 3. Copy or clip folder to C-Drive or desired folder
