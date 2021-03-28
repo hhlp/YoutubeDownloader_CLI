@@ -1,11 +1,11 @@
 from __future__ import unicode_literals
-import os
 import youtube_dl
+import os
 
 
 class YoutubeDownloader(object):
     """ Simple YouTube MP3 Downloader """
-    default_savepath = os.path.join(os.path.expanduser("~"), "Downloads")
+    default_savepath = str(os.path.join(os.path.expanduser("~"), "Downloads"))
     
     def __init__(self, url, save_path=default_savepath, no_playlist=True):
         self.url = url
@@ -20,20 +20,21 @@ class YoutubeDownloader(object):
             "format" : "bestaudio/best",
             "postprocessors" : [{
                 "key": "FFmpegExtractAudio",
-                "preferedcodec"  : "mp3",
-                "preferedquality": "1411"
+                "preferredcodec"  : "mp3",
+                "preferredquality": "1411"
             }],
             "extractaudio": True,
-            "outtmpl"     : save_path + "/%(title)s.%(ext)s",
+            "outtmpl"     : self.save_path + "/%(title)s.%(ext)s",
             "noplaylist"  : self.no_playlist
         }
         
         
     def downlaod(self):
         download_object = youtube_dl.YoutubeDL(self.opts())
-        download_object([self.url])
+        download_object.download([self.url])
 
 
 if __name__ == "__main__":
+    # Dummy URL: https://youtu.be/M-mtdN6R3bQ
     url = input(r"Enter url for song: ")
-    download = YoutubeDownloader(url)
+    YoutubeDownloader(url).downlaod()
