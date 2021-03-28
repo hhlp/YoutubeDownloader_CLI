@@ -4,12 +4,12 @@ Simple fast youtube downloader
 FFmpeg Install:
 1. FFmpeg download link Windows 10: https://www.gyan.dev/ffmpeg/builds/ffmpeg-git-full.7z
 2. Extract files to a folder named FFmpeg
-    - FFmpeg:
-        bin
-        doc
-        presets
-        - LICENCE
-        - README
+- FFmpeg:
+  bin
+  doc
+  presets
+  - LICENCE
+  - README
 3. Copy or clip folder to C-Drive or desired folder
 4. Open PowerShell as admin
 5. Type this command (Depends on your save path for the folder "FFmpeg"):
