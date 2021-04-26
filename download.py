@@ -52,26 +52,16 @@ if __name__ == "__main__":
 `;;;;' [1] DOWNLOAD SINGLE
        [2] DOWNLOAD MULTIPLE
     """)
-        # try:
         selection = input("  >> ")
         if selection == "0":
             break
         elif selection == "1":
-            # url = input(r"Enter URL to song  >> ")
-            url = "https://youtu.be/M-mtdN6R3bQ"
+            url = input(r"Enter URL to song  >> ")
             Downloader(url, no_playlist=True).download()
         elif selection == "2":
-            # url = input(r"Enter URL to playlist  >> ")
-            url = "https://youtu.be/M-mtdN6R3bQ"
+            url = input(r"Enter URL to playlist  >> ")
             Downloader(url, no_playlist=False).download()
         else:
             continue
-        # except:
-        #     continue
-
-
-
-    # Dummy URL: https://youtu.be/M-mtdN6R3bQ
-    # url = input(r"Enter url for song: ")
-    # YoutubeDownloader(url).downlaod()
-
+        
+# Dummy URL: https://youtu.be/M-mtdN6R3bQ
