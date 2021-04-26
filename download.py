@@ -15,7 +15,7 @@ class Downloader(object):
     
     def opts(self):
         return {
-            "verbose": True,
+            "verbose": False,
             "fixup"  : "detect_or_warn",
             "format" : "bestaudio/best",
             "postprocessors" : [{
@@ -65,3 +65,4 @@ if __name__ == "__main__":
             continue
         
 # Dummy URL: https://youtu.be/M-mtdN6R3bQ
+
