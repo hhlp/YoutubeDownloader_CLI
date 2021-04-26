@@ -3,7 +3,7 @@ import youtube_dl
 import os
 
 
-class YoutubeDownloader(object):
+class Downloader(object):
     """ Simple YouTube MP3 Downloader """
     default_savepath = str(os.path.join(os.path.expanduser("~"), "Downloads"))
     
@@ -29,13 +29,49 @@ class YoutubeDownloader(object):
         }
         
         
-    def downlaod(self):
+    def download(self):
         download_object = youtube_dl.YoutubeDL(self.opts())
         download_object.download([self.url])
 
 
 if __name__ == "__main__":
+    while True:
+        os.system("cls")
+        print("""   
+     ; 
+     ;;
+     ;';.
+     ;  ;;
+     ;   ;;
+     ;    ;;
+     ;    ;;
+     ;   ;'
+     ;  ' 
+,;;;,; [ Youtube Mp3 Downloader ]
+;;;;;; [0] EXIT
+`;;;;' [1] DOWNLOAD SINGLE
+       [2] DOWNLOAD MULTIPLE
+    """)
+        # try:
+        selection = input("  >> ")
+        if selection == "0":
+            break
+        elif selection == "1":
+            # url = input(r"Enter URL to song  >> ")
+            url = "https://youtu.be/M-mtdN6R3bQ"
+            Downloader(url, no_playlist=True).download()
+        elif selection == "2":
+            # url = input(r"Enter URL to playlist  >> ")
+            url = "https://youtu.be/M-mtdN6R3bQ"
+            Downloader(url, no_playlist=False).download()
+        else:
+            continue
+        # except:
+        #     continue
+
+
+
     # Dummy URL: https://youtu.be/M-mtdN6R3bQ
-    url = input(r"Enter url for song: ")
-    YoutubeDownloader(url).downlaod()
+    # url = input(r"Enter url for song: ")
+    # YoutubeDownloader(url).downlaod()
 
